@@ -1,0 +1,46 @@
+query CartValidationsGenerateRunInput {
+  cart {
+    deliveryGroups {
+      deliveryAddress {
+        address1
+        address2
+        provinceCode
+        zip
+        countryCode
+      }
+      cartLines {
+        quantity
+        merchandise {
+          __typename
+          ... on ProductVariant {
+            requiresShipping
+            product {
+              title
+              hasTags(
+                tags: [
+                  "quarantine"
+                  "quarantine-wa"
+                  "quarantine-tas"
+                  "quarantine-nt"
+                  "quarantine-sa"
+                  "quarantine-qld"
+                  "quarantine-vic"
+                  "quarantine-nsw"
+                  "quarantine-act"
+                ]
+              ) {
+                tag
+                hasTag
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  validation {
+    metafield(namespace: "$app:postcode-rules", key: "config") {
+      jsonValue
+    }
+  }
+}

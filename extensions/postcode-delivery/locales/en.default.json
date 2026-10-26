@@ -1,0 +1,4 @@
+{
+  "name": "Postcode Rules – shipping rates",
+  "description": "Hides shipping rates for remote postcodes and keeps metro-only rates in metro postcodes."
+}

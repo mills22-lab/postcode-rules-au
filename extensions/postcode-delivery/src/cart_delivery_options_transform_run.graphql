@@ -1,0 +1,20 @@
+query CartDeliveryOptionsTransformRunInput {
+  cart {
+    deliveryGroups {
+      deliveryAddress {
+        provinceCode
+        zip
+        countryCode
+      }
+      deliveryOptions {
+        handle
+        title
+      }
+    }
+  }
+  deliveryCustomization {
+    metafield(namespace: "$app:postcode-rules", key: "config") {
+      jsonValue
+    }
+  }
+}

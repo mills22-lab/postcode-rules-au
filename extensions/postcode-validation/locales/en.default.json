@@ -1,0 +1,4 @@
+{
+  "name": "Postcode Rules – checkout validation",
+  "description": "Blocks PO boxes, blocked states/postcodes and quarantine-tagged products for Australian addresses."
+}
