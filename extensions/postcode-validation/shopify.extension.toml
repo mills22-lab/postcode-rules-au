@@ -12,6 +12,6 @@ description = "t:description"
   export = "cartValidationsGenerateRun"
 
   [extensions.build]
-  command = ""
+  command = "npm exec -- shopify app function build"
   path = "dist/function.wasm"
   watch = ["src/**/*.js"]
